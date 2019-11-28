@@ -2,7 +2,7 @@ from ckan.plugins.toolkit import  _, h, get_action
 import ckan.logic as logic
 import ckan.lib.navl.dictization_functions as dict_fns
 from ckan.common import request
-import ckan.lib.base as base
+from ckan.lib.base import base
 
 abort = base.abort
 redirect = base.redirect
