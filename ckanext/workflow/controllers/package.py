@@ -2,10 +2,10 @@ from ckan.plugins.toolkit import  _, h, get_action
 import ckan.logic as logic
 import ckan.lib.navl.dictization_functions as dict_fns
 from ckan.common import request
-from ckan.lib.base import base
+import ckan.lib.base as base
 
 abort = base.abort
-redirect = base.redirect
+redirect = base.redirect_to
 
 tuplize_dict = logic.tuplize_dict
 clean_dict = logic.clean_dict
