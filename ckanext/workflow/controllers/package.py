@@ -3,9 +3,11 @@ import ckan.logic as logic
 import ckan.lib.navl.dictization_functions as dict_fns
 from ckan.common import request
 import ckan.lib.base as base
+import ckan.lib.helpers as h
+
 
 abort = base.abort
-redirect = base.redirect_to
+redirect = h.redirect_to
 
 tuplize_dict = logic.tuplize_dict
 clean_dict = logic.clean_dict
