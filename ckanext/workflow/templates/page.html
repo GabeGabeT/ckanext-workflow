@@ -1,7 +1,6 @@
 {% ckan_extends %}
 
 {%- set current_user_name = h.ab_ps_current_user_name() -%}
-{% set org_id = c.pkg.owner_org if c.pkg.owner_org else '' %}
 
 {% block primary_content %}
 	<article class="module">
