@@ -26,29 +26,6 @@ def setup():
         log.debug('Package_process_state table creation deferred')
 
 
-class PackageProcessStateBaseModel(object):
-    @classmethod
-    def filter(cls, session, **kwargs):
-        return session.query(cls).filter_by(**kwargs)
-
-    @classmethod
-    def exists(cls, session, **kwargs):
-        if cls.filter(session, **kwargs).first():
-            return True
-        else:
-            return False
-
-    @classmethod
-    def get(cls, session, **kwargs):
-        instance = cls.filter(session, **kwargs).first()
-        return instance
-
-    @classmethod
-    def create(cls, session, **kwargs):
-        instance = cls(**kwargs)
-        session.add(instance)
-        session.commit()
-        return instance.as_dict()
 
 
 class PackageProcessState(PackageProcessStateBaseModel):
